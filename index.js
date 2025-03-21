@@ -24,7 +24,7 @@ async function getWeather() {
     location.innerHTML = `${data.location.name}, ${data.location.region}, ${data.location.country}`
     temperature.innerHTML = `${data.current.temp_c}°C`
     condition.innerHTML = data.current.condition.text
-   icon.innerHTML = `<img src="${data.current.condition.icon}" alt="weather icon" class="mx-auto">`;
+   icon.innerHTML = `<img src="https:${data.current.condition.icon}" alt="weather icon" class="mx-auto">`;
 
     // Show the weather data section
     weatherData.classList.remove("hidden")
