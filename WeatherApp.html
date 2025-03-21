@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App By Asad Lakho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body
+    class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 min-h-screen flex items-center justify-center">
+    <!-- Container -->
+    <div class="bg-white bg-opacity-80 shadow-xl rounded-lg p-6 max-w-lg w-full space-y-6 backdrop-blur-lg">
+    <h1
+            class="text-5xl italic font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-600 drop-shadow-2xl">
+            Weather App
+        </h1>
+        <!-- City Input and Fetch Button Section -->
+        <div class="flex justify-center space-x-4">
+            <input id="cityName" type="text"
+                class="border-lime-300 mt-2 border-gray-300 rounded-lg p-4 w-70 text-center text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+                placeholder="Enter your city name" />
+            <button onclick="getWeather()"
+                class=" mt-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white p-4 rounded-lg hover:bg-gradient-to-l hover:from-purple-600 hover:to-blue-500 transition-all duration-300">
+                Search
+            </button>
+        </div>
+
+        <!-- Weather Data Section -->
+        <div class="hidden text-center text-gray-800" id="weatherData">
+            <h2 id="location" class="text-2xl font-bold mb-4"></h2>
+            <p id="temperature" class="text-4xl font-semibold mb-2"></p>
+            <p id="condition" class="text-xl mb-6"></p>
+            <div id="icon" class="mb-4"></div>
+        </div>
+
+        <!-- Error Message Section -->
+        <div class="hidden text-center text-red-500 font-bold" id="errorMessage">
+            <p>City not found , Please try again.</p>
+        </div>
+    </div>
+</body>
+<script src="WeatherApp.js"></script>
+
+</html>
